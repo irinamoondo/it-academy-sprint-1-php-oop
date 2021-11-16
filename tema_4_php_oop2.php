@@ -9,14 +9,15 @@
     }
     class Triangle extends Shape {
         public function areaTriangle ($height, $width) {
-            return ($height * $width)/2;
+            return ($this->height * $this->width)/2;
         }
     }
     class Rectangle extends Shape {
         public function areaTriangle ($height, $width) {
-            return $height * $width;
+            return ($this->height * $this->width);
         }
     }
+
 /* example
 $triangle1 = new Triangle(20, 30);
 echo $triangle1->areaTriangle (20, 30); */
