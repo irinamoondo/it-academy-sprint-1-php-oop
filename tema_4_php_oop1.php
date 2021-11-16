@@ -4,16 +4,19 @@
     public $name;
     public $salary;
     //method
-    public function initialize($name, $salary) {
-        if ($salary > 6000) {
-            return "$name must pay taxes." ;
+    public function initialize ($name, $salary) {
+        $this->name = $name;
+        $this->salary= $salary;
+    
+        if ($this->salary > 6000) {
+            return "$this->name must pay taxes" ;
         }
         else {
-            return "$name doesn't have to pay taxes." ;
+            return "$this->name doesn't have to pay taxes" ;
         }
     }
 }
 /* example
-$employee1 = new Employee();
-echo $employee1->initialize("Steven", 3000);*/
+$employee01 = new Employee ();
+echo $employee01->initialize("John", 7000); */
 ?>
